@@ -71,7 +71,7 @@ fi
 
 # Create Watson Speech to Text service
 figlet -f small 'Speech to Text'
-bx cf create-service speech_to_text standard speechtotext-for-darkvision
+bx cf create-service speech_to_text lite speechtotext-for-darkvision
 bx cf create-service-key speechtotext-for-darkvision for-darkvision
 
 STT_CREDENTIALS=`bx cf service-key speechtotext-for-darkvision for-darkvision | tail -n +5`
